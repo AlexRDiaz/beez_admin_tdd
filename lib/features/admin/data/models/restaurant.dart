@@ -1,4 +1,5 @@
-import 'package:beez_admin/models/store.dart';
+import 'package:beez_super_admin_tdd/features/admin/data/models/media_model.dart';
+import 'package:beez_super_admin_tdd/features/admin/domain/entities/media.dart';
 
 class Restaurant {
   String? id;
@@ -34,8 +35,9 @@ class Restaurant {
     id = jsonMap['id'].toString();
     name = jsonMap['name'];
     if (jsonMap['has_media'])
-      image =
-          jsonMap['media'] != null ? Media.fromJson(jsonMap['media'][0]) : null;
+      image = jsonMap['media'] != null
+          ? MediaModel.fromJson(jsonMap['media'][0])
+          : null;
     rate = jsonMap['rate'].toString();
     address = jsonMap['address'];
     description = jsonMap['description'];
