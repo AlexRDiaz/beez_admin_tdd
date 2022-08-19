@@ -11,8 +11,8 @@ class Category extends Equatable {
   final bool hasMedia;
   final List<Media>? media;
 
-  Category(this.id, this.name, this.createdAt, this.updatedAt, this.type,
-      this.index, this.hasMedia, this.media)
+  Category({required this.id,required this.name, required this.createdAt, required this.updatedAt, required this.type,
+     required this.index, required this.hasMedia, required this.media})
       : super();
 
   @override

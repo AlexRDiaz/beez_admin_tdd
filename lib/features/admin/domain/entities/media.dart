@@ -8,7 +8,7 @@ class Media extends Equatable {
   final String icon;
   final String size;
 
-  Media(this.id, this.name, this.url, this.thumb, this.icon, this.size)
+  Media({required this.id, required this.name, required this.url, required this.thumb, required this.icon,required this.size})
       : super();
 
   @override
